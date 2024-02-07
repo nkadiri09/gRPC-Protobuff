@@ -71,3 +71,5 @@
     syntax = "proto3"; #identifying version of proto
     option java_multiple_files = true;  #defining model outside of outer class
     option java_package ="com.naren.models"; #defining package for generated java classes
+
+<details>
