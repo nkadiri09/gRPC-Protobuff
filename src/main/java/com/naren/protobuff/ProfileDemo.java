@@ -1,10 +1,10 @@
 package com.naren.protobuff;
 
-import com.naren.models.Person;
+import com.naren.models.Profile;
 
-public class PersonDemo {
+public class ProfileDemo {
     public static void main(String[] args) {
-        Person person1 = Person.newBuilder()
+        Profile person1 = Profile.newBuilder()
                 .setAge(22)
                 .setName("Narenda")
                 .build();
