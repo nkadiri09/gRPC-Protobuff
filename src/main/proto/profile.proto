@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "common/Address.proto";
 import "common/Package.proto";
+import "common/Role.proto";
 
 option java_multiple_files = true;
 option java_package ="com.naren.models";
@@ -11,5 +12,6 @@ message Profile {
   int32 age = 2;
   Address address = 3;
   repeated Package package = 4;
-  map<int32, string> role = 5;
+  map<int32, string> skills = 5;
+  Role role = 6;
 }

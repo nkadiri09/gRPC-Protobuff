@@ -1,8 +1,7 @@
 package com.naren.protobuff;
 
-import com.naren.models.Address;
+import com.naren.models.*;
 import com.naren.models.Package;
-import com.naren.models.Profile;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,15 +14,22 @@ public class ProfilePackageAddressDemo {
         Map<Integer, String> roleMap = new HashMap<>();
         roleMap.put(2,"TestRol2");
         Address alp = Address.newBuilder().setStreet("623 Estuary trail").setCity("Alp").setZip(56002).build();
+        Role role = Role.newBuilder().setRoleType(RoleType.Admin).setName("Admin").build();
         Profile profile = Profile.newBuilder()
                 .setAge(22)
                 .setName("Narendra")
                 .setAddress(alp)
                 .addPackage(pac)
-                .putRole(1, "TestRole")
+                .putSkills(1, "cooking")
                 // .putAllRole(roleMap) can add multiple key value pairs
+                .setRole(role)
                 .build();
         System.out.println("profile is: "+profile);
+
+
+        Profile profile1 = Profile.newBuilder().build();
+        System.out.println("role is: "+profile1.getRole().getName());
+        // There is no null value in Protobuff, by default we get an empty values if we don't set explicitly.
 
     }
 }

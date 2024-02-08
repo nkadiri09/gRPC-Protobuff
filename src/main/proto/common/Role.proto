@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package ="com.naren.models";
+
+message Role {
+    string name = 1;
+    RoleType roleType = 2;
+}
+
+enum RoleType{
+  ReadOnly = 0;
+  ReadWrite = 1;
+  Admin = 2;
+  SuperAdmin =3;
+}
