@@ -11,4 +11,5 @@ message Profile {
   int32 age = 2;
   Address address = 3;
   repeated Package package = 4;
+  map<int32, string> role = 5;
 }
